@@ -368,6 +368,10 @@ nav span > img {
   .input-box {
     width: 30rem;
   }
+  
+  .container {
+   width: 90%; 
+  }
 }
 
 @media (max-width: 560px) {
