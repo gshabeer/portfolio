@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bomb Design</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="bomb">
+        <span class="head"><i>|</i></span>
+      </div>
+
+      <div class="boom hide">
+        <img src="./boom1.png" alt="boom" />
+      </div>
+
+      <audio class="boomEffect" src="./boom.mp3"></audio>
+    </div>
+
+    <script>
+      let bomb = document.querySelector(".bomb");
+      let boom = document.querySelector(".boom");
+      let boomEffect = document.querySelector(".boomEffect");
+      bomb.addEventListener("click", () => {
+        boom.classList.remove("hide");
+        boomEffect.play();
+
+        setTimeout(() => {
+          boom.classList.add("hide");
+          boomEffect.paused;
+        }, 3000);
+      });
+    </script>
+  </body>
+</html>
