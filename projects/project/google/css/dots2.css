@@ -1,0 +1,41 @@
+.bg-hover {
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border-radius: 10rem;
+    margin: 1rem;
+    position: relative;
+}
+
+.bg-hover:hover {
+    background: rgba(60, 64, 67, 0.10);
+    filter: blur(0.01rem);
+}
+
+.dots {
+
+    display: grid;
+    grid-template-columns: repeat(3, 0.4rem);
+    gap: 0.2rem;
+    cursor: pointer;
+    margin: 2.1rem 2.1rem;
+    padding-left: 1rem;
+}
+
+.dot1,
+.dot2,
+.dot3,
+.dot4,
+.dot5,
+.dot6,
+.dot7,
+.dot8,
+.dot9 {
+    width: 0.4rem;
+    height: 0.4rem;
+    background: #5f6368;
+    border-radius: 1rem;
+}

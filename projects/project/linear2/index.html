@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Circle Range Slider</title>
+
+    <!-- slider css -->
+    <link rel="stylesheet" href="css/slider.css" />
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body id="bg">
+    <div class="container flex">
+      <div>
+        <input type="color" value="#1488cc" id="color-a" />
+        <input type="color" value="#2b32b2" id="color-b" />
+      </div>
+
+      <span>
+        <h2 id="code"></h2>
+        <button id="copy">Copy</button>
+      </span>
+
+      <input
+        type="text"
+        id="test-1"
+        name="range-slider"
+        class="circle-range-select"
+        value="0;360"
+        data-boundry="0;360"
+        data-min="0"
+        data-max="360"
+        data-unit="deg"
+      />
+
+      <button class="btn" id="generate">Generate</button>
+    </div>
+
+    <!-- JQuery JS -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- Slider JS -->
+    <script src="js/slider.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/index.js"></script>
+  </body>
+</html>

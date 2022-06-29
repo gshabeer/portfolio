@@ -1,0 +1,123 @@
+html {
+    font-size: 62.5%;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #19a1ca;
+    font-family: sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: royalblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    font-size: 1.6rem;
+}
+
+.wrapper {
+    max-width: 36rem;
+    width: 100%;
+    padding: 1.6rem;
+    border-radius: .6rem;
+    background: #fff;
+}
+
+.title {
+    font-size: 2.4rem !important;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.number-color {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.6rem;
+}
+
+.number-color input {
+    flex: 1;
+    overflow-x: auto;
+    width: 100%;
+    margin-right: 1.6rem;
+}
+
+.number-color input::-moz-range-progress {
+    height: 0.8rem;
+    background: royalblue;
+    border-radius: 0.8rem;
+}
+
+.number-color input::-moz-range-track {
+    height: 0.6rem;
+    background: #eceaea;
+    border-radius: 0.6rem;
+}
+
+.number-color input::-moz-range-thumb {
+    width: 1.2rem;
+    height: 1.2rem;
+    background: #fff;
+    border: 3px solid royalblue;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.number-color p {
+    font-weight: 600;
+}
+
+.code {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1.6rem;
+}
+
+.code input {
+    flex: 1;
+    margin-right: 1.6rem;
+    outline: none;
+    border: none;
+    border-radius: 0.3rem;
+    background: #eee;
+    padding: 0.4rem;
+    font-weight: 500;
+}
+
+.code .copy {
+    padding: 0.4rem;
+    background: royalblue;
+    font-size: 1.3rem;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    color: #fff;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.generate {
+    width: 100%;
+    padding: 1rem 0;
+    background: royalblue;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    border-radius: 0.3rem;
+    color: #fff;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.copy:hover,
+.generate:hover {
+    background: rgb(30, 75, 211);
+}

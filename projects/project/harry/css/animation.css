@@ -1,0 +1,57 @@
+.container {
+    width: 34rem;
+    position: relative;
+    left: 34rem;
+    overflow: hidden;
+}
+
+.change_content {
+    padding: 3rem 0;
+    font-weight: 600;
+    animation: change_content 3s steps(24) infinite;
+}
+
+@keyframes text1 {
+    0% {
+        content: "";
+    }
+}
+
+@keyframes change_content {
+
+    0%,
+    90%,
+    100% {
+        transform: translateX(-29rem);
+    }
+
+    30%,
+    60% {
+        transform: translateX(0);
+    }
+}
+
+.blink_text {
+    margin-left: 1rem;
+    animation: blink_text 1.5s linear infinite;
+    transition: 1s all linear;
+    font-size: 2rem;
+    font-weight: 700;
+    position: absolute;
+}
+
+@keyframes blink_text {
+
+    0%,
+    10%,
+    40%,
+    90%,
+    100% {
+        visibility: hidden;
+    }
+
+    30%,
+    60% {
+        visibility: visible;
+    }
+}

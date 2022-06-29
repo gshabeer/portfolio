@@ -1,0 +1,269 @@
+html {
+  font-size: 62.5%;
+  font-family: "Roboto", "RobotoDraft", Arial, sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: #ffffff;
+}
+
+body a {
+  text-decoration: none;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 1.8rem;
+  padding: 0.6rem;
+}
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  margin-top: -0.7rem;
+  margin-right: -0.7rem;
+}
+
+.nav-bar a {
+  color: #212121;
+  font: 13px/27px Roboto, RobotoDraft, Arial, sans-serif;
+  margin: 0.9rem;
+  margin-left: 0.3rem;
+  font-size: 1.3rem;
+  padding-left: 0.3rem;
+  padding-top: 0.2rem;
+}
+
+.nav-bar a:hover {
+  text-decoration: underline;
+}
+
+.dots {
+  margin-left: 1rem;
+}
+
+.btn-sign-in {
+  width: 9.6rem;
+  height: 3.6rem;
+  background: #1a73e8;
+  border: 1px solid transparent;
+  color: white;
+  border: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  font-weight: 500;
+  letter-spacing: 0.25px;
+  text-align: center;
+  margin-top: 0.1rem;
+}
+
+.btn-sign-in:hover {
+  opacity: 93%;
+}
+
+.logo {
+  width: 100%;
+  height: auto;
+  margin-top: -0.5rem;
+}
+
+.logo img {
+  width: 27.2rem;
+  display: flex;
+  margin: auto;
+}
+
+.sec1 {
+  padding: 2.7rem;
+}
+
+.search {
+  width: 58.5rem;
+  height: 4.6rem;
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  margin: auto;
+  border-radius: 10rem;
+  border: 0.1rem solid #00000021;
+}
+
+.search:hover {
+  background-color: #fff;
+  box-shadow: 0 1px 6px #20212447;
+  border-color: #dfe1e500;
+}
+
+.search input {
+  display: flex;
+  flex: 100%;
+}
+
+.srch-logo {
+  width: 2rem;
+  height: auto;
+  position: relative;
+}
+
+span {
+  color: #9aa0a6;
+  fill: currentColor;
+}
+
+.input-box {
+  width: 53rem;
+  height: 3.4rem;
+  background: #0000;
+  border: none;
+  color: #000000de;
+  font-size: 1.6rem;
+  outline: none;
+  flex: 100%;
+  position: relative;
+  left: 1rem;
+}
+
+.search-btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  margin: 0.7rem 3rem 0 2rem;
+}
+
+.search-btn {
+  width: 13.2rem;
+  height: 3.5rem;
+  background: none;
+  border: none;
+  color: #3c4043;
+  cursor: pointer;
+  border-radius: 0.4rem;
+  font-family: arial, sans-serif;
+  font-size: 1.4rem;
+  margin: 0rem 0.6rem;
+}
+
+.search-btn:hover {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  background-color: #f8f9fa;
+  border: 1px solid #dadce0;
+  color: #202124;
+}
+
+.search-btn:focus {
+  border: 1px solid #4285f4;
+  outline: none;
+}
+
+.langs {
+  display: flex;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: #3c4043;
+  margin-top: 1rem;
+}
+
+.langs a {
+  padding-left: 1rem;
+}
+
+.langs a:hover {
+  text-decoration: underline;
+}
+
+.langs a:visited {
+  color: blue;
+}
+
+.footer {
+  background: #f2f2f2;
+  color: #0000008a;
+}
+
+.pak {
+  padding: 1.5rem 3rem;
+  border-bottom: 0.001rem solid #dadce0;
+  font-size: 1.6rem;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.f-links2 {
+  padding: 0 2rem;
+}
+
+.f-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 1200px) {
+  .f-links {
+    justify-content: space-evenly;
+  }
+}
+
+.a-links {
+  display: block;
+  padding: 1.5rem;
+  white-space: nowrap;
+}
+
+a.a-links {
+  font-size: 1.5rem;
+  color: #70757a;
+}
+
+a.a-links:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 630px) {
+  .search {
+    width: 45rem;
+    height: 4.2rem;
+  }
+}
+
+@media (max-width: 490px) {
+  .search {
+    width: 35rem;
+    height: 3.8rem;
+  }
+
+  .search-btns {
+    margin-top: 2rem;
+    padding: 0;
+  }
+
+  .btn-sign-in {
+    width: 7rem;
+    height: 3rem;
+  }
+
+  .logo img {
+    width: 19rem;
+  }
+}
+
+@media (max-width: 390px) {
+  .search {
+    width: 25rem;
+    height: 3.5rem;
+  }
+
+  .search-btn {
+    width: 10rem;
+    font-size: 1.2rem;
+  }
+}

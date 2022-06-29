@@ -1,0 +1,212 @@
+html {
+    font-size: 62.5%;
+}
+
+::-webkit-scrollbar {
+    background: transparent;
+    width: 1.3rem;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 3rem;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+::-moz-range-thumb {
+    border-radius: 3rem;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    background: #e9e2e2d2;
+    font-family: sans-serif;
+}
+
+.header {
+    width: 100vw;
+    height: 10rem;
+    background: #0ce4c7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1,
+.header h1 i {
+    font-size: 3rem;
+    color: #fff;
+    margin-left: 2rem;
+}
+
+.note-button {
+    width: 100vw;
+    margin-right: 3rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: end;
+
+}
+
+.add-btn {
+    width: 14rem;
+    height: auto;
+    background: none;
+    cursor: pointer;
+    display: flex;
+    position: relative;
+}
+
+.add-btn:hover .circle {
+    width: 100%;
+}
+
+.add-btn:hover .icon {
+    transform: rotate(360deg);
+}
+
+.add-btn:hover .btn-txt {
+    color: #fff;
+    transition-delay: 0.18s;
+}
+
+.circle {
+    width: 4rem;
+    height: 4rem;
+    background: #1df509;
+    border-radius: 30rem;
+    transition: all .3s linear;
+}
+
+.btn-txt {
+    position: absolute;
+    left: 4.5rem;
+    bottom: 1rem;
+    font-size: 1.8rem;
+    color: #000;
+}
+
+.icon {
+    width: .4rem;
+    height: 2rem;
+    background: #fff;
+    border-radius: .3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 1.8rem;
+    top: 1rem;
+    transition: all .3s linear;
+}
+
+.icon::before {
+    content: '';
+    width: .4rem;
+    height: 2rem;
+    background: #fff;
+    border-radius: .3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: rotate(90deg);
+}
+
+.operation button {
+    background: transparent;
+    color: #fff;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 30rem;
+    cursor: pointer;
+}
+
+.fa-edit,
+.fa-trash-alt {
+    color: #fff;
+    background: #2ecc71;
+    padding: 1rem;
+    font-size: 2rem;
+    box-sizing: content-box;
+    border-radius: 30rem;
+}
+
+.fa-trash-alt {
+    background: #e74c3c;
+}
+
+.fa-edit:hover {
+    background: #fff;
+    color: #2ecc71;
+    filter: drop-shadow(0px 10px 8px rgb(219, 218, 218));
+}
+
+.fa-trash-alt:hover {
+    background: #fff;
+    color: #e74c3c;
+    filter: drop-shadow(0px 10px 8px rgb(219, 218, 218));
+}
+
+.note {
+    width: 25rem;
+    height: 18rem;
+    background: #fff;
+    position: relative;
+    top: -3rem;
+    margin-left: 5rem;
+    margin-top: 7rem;
+    overflow-y: auto;
+    box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1), inset 0 -1px rgba(0, 0, 0, 0.1);
+}
+
+.note .operation {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.5rem;
+    position: absolute;
+    top: 0rem;
+    right: 0;
+    z-index: 1;
+}
+
+.main {
+    display: block;
+    padding: 2rem;
+    position: absolute;
+    top: 5rem;
+    font-size: 1.6rem;
+}
+
+.note textarea {
+    width: 99%;
+    height: 10rem;
+    padding: 0 1rem;
+    font-family: inherit;
+    font-size: 1.75rem;
+    position: absolute;
+    top: 7.9rem;
+    left: .25rem;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width:300px) {
+    .note {
+        margin-left: 1rem;
+    }
+}
