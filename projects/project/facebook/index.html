@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Facebook – log in or sign up</title>
+
+    <!-- FavIcon -->
+    <link
+      rel="shortcut icon"
+      href="./assets/favicon.c636a92a.ico"
+      type="image/x-icon"
+    />
+
+    <!-- Tailwind CSS file -->
+
+    <link rel="stylesheet" href="./assets/index.4817838c.css" />
+  </head>
+
+  <body>
+    <div
+      class="bg-gray-100 flex justify-around items-center h-screen md:hidden"
+    >
+      <div class="left h-96 flex flex-col text-left relative right-5">
+        <img
+          src="./assets/fb.9531e960.svg"
+          alt=""
+          class="w-72 relative right-8"
+        />
+        <p class="text-2xl font-medium text-gray-700">
+          Facebook helps you connect and <br />
+          share with the people in your life.
+        </p>
+      </div>
+      <div class="right">
+        <form
+          class="flex justify-center items-center flex-col space-y-5 border h-[22rem] w-96 shadow-xl rounded-xl py-40 relative bottom-8"
+        >
+          <input
+            type="text"
+            placeholder="Email address or phone number"
+            class="w-[85%] border outline-none rounded p-2"
+          />
+          <input
+            type="password"
+            name=""
+            id=""
+            placeholder="Password"
+            class="w-[85%] border outline-none rounded p-2"
+          />
+          <input
+            type="button"
+            value="Log ln"
+            class="w-[85%] bg-[#1877f2] p-1 rounded py-2 text-white font-bold text-lg cursor-pointer"
+          />
+          <p class="text-sm text-sky-500 cursor-pointer">Forgotten password?</p>
+          <hr class="border-t-gray-300 w-80" />
+          <input
+            type="button"
+            value="Create New Account"
+            class="p-3 rounded-lg text-white font-bold bg-[limegreen]"
+          />
+        </form>
+        <p class="text-sm text-center">
+          <span class="font-bold">Create a Page</span> for celebrity, brand or
+          business.
+        </p>
+      </div>
+    </div>
+
+    <!-- For Responsive As facebook Use it -->
+    <div class="bg-gray-100 hidden md:block">
+      <nav class="flex items-center justify-center w-screen mt-6">
+        <img
+          class="w-32 xsm:w-28 sxsm:w-24"
+          src="./assets/fb.9531e960.svg"
+          alt="Logo Loading..."
+        />
+      </nav>
+      <form
+        class="m-auto mt-4 w-1/2 flex items-center justify-center flex-col relative"
+      >
+        <input
+          type="text"
+          class="xsm:w-80 sxsm:w-52 ssxsm:w-36 ssxsm:text-[10px] w-96 border-black border-[1px] border-opacity-10 shadow-sm rounded-sm p-1 pl-2"
+          placeholder="Mobile number or email address"
+        />
+
+        <input
+          type="password"
+          class="xsm:w-80 sxsm:w-52 ssxsm:w-36 ssxsm:text-[10px] w-96 border-black border-[1px] border-opacity-10 shadow-sm rounded-sm p-1 pl-2 mt-2"
+          placeholder="Password"
+        />
+
+        <input
+          type="button"
+          value="Log in"
+          class="xsm:w-80 sxsm:w-52 w-96 rounded p-1 mt-6 bg-blue-600 bg-opacity-90 text-white text-lg font-bold cursor-pointer hover:bg-blue-700 sxsm:text-sm ssxsm:w-36 ssxsm:text-[10px]"
+        />
+
+        <span
+          class="mt-2 text-blue-500 cursor-pointer hover:underline sxsm:text-xs ssxsm:text-[9px]"
+        >
+          Forgotten password?
+        </span>
+
+        <hr class="xsm:w-80 sxsm:w-52 w-96 mt-6 bg-black border-t-2" />
+
+        <span
+          class="absolute bottom-[2.7rem] w-12 h-12 flex items-center justify-center bg-white ssxsm:text-[10px]"
+        >
+          or
+        </span>
+
+        <input
+          type="button"
+          value="Create New Account"
+          class="sxsm:w-32 sxsm:text-[10px] sxsm:mt-8 ssxsm:w-28 ssxsm:text-[10px] ssxsm:px-1 -pr-1 text-left bg-[#28b128] hover:bg-[#278c2a] p-2 px-4 rounded text-white font-bold mt-6 cursor-pointer"
+        />
+      </form>
+
+      <footer class="w-screen text-center mt-8 text-gray-500 absolute bottom-8">
+        Meta &copy; 2022
+      </footer>
+    </div>
+  </body>
+</html>

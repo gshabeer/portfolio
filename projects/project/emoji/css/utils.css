@@ -1,0 +1,36 @@
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(2, 15rem);
+  gap: 1rem;
+}
+
+.hide {
+  display: none !important;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.green {
+  background: rgb(98, 231, 98);
+}
+
+.yellow {
+  background: rgb(231, 231, 82);
+}
+
+.red {
+  background: rgb(209, 65, 65);
+}
+
+.blue {
+  background: rgb(91, 91, 238);
+}

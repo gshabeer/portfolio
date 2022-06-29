@@ -1,0 +1,533 @@
+html {
+  font-size: 62.5%;
+}
+
+::-moz-range-thumb {
+  width: 0.8rem;
+  border-radius: 5%;
+  background: royalblue;
+}
+
+::-moz-range-progress {
+  height: 0.6rem;
+  background: slateblue;
+}
+
+::-moz-range-track {
+  height: 1.5rem;
+  background: slategray;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-size: 1.6rem;
+  overflow: hidden;
+}
+
+nav {
+  width: 100%;
+  height: 6rem;
+  background: #222;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  transition: all 0.3s linear;
+}
+
+ul {
+  display: flex;
+  margin-right: 5rem;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  margin-left: 5rem;
+  font-size: 2rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+li a:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.logo {
+  width: 15rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  backdrop-filter: blur(5px);
+  margin-left: -3rem;
+  text-shadow: -0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+  box-shadow: -0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.5);
+  font-size: 2.5rem;
+  font-weight: 600;
+  font-family: Tahoma;
+}
+
+.logo span {
+  margin-left: 0.5rem;
+  color: rgb(156, 48, 133);
+}
+
+.burger {
+  width: 5rem;
+  height: 4rem;
+  background: rgba(65, 202, 157, 0.6);
+  box-shadow: -0.8rem 0.4rem 0.4rem rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  flex-direction: column;
+  margin-right: 2rem;
+  padding-top: 0.5rem;
+  cursor: pointer;
+}
+
+.burger:active {
+  box-shadow: -0.4rem 0.2rem 0.4rem rgba(0, 0, 0, 0.5);
+}
+
+.line1,
+.line2,
+.line3 {
+  height: 0.3rem;
+  background: #fff;
+  margin-bottom: 0.6rem;
+  margin-left: 0.4rem;
+}
+
+.line1 {
+  width: 3.5rem;
+}
+
+.line2 {
+  width: 2.5rem;
+}
+
+.line3 {
+  width: 3.2rem;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #d9e2a3, #b8b97a);
+  display: flex;
+  justify-content: center;
+  padding-top: 3rem;
+  transition: all 0.3s linear;
+}
+
+.player {
+  width: 85%;
+  height: 50rem;
+  background: #333;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 4;
+}
+
+.controls {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  font-family: cursive;
+}
+
+.video-duration {
+  margin-right: 0.5rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.5rem;
+}
+
+.range-bar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0 1rem;
+}
+
+#range-slider {
+  width: 90%;
+  cursor: pointer;
+  background: transparent;
+}
+
+.total-time {
+  margin-left: 0.5rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.5rem;
+}
+
+.ctrl-btns {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.song-info {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 2rem;
+  cursor: auto;
+}
+
+.time-stamp {
+  cursor: auto;
+}
+
+.state-btns {
+  width: 16rem;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 3.5rem;
+}
+
+.state-btn {
+  cursor: pointer;
+}
+
+.sound {
+  width: 9rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  font-size: 2rem;
+}
+
+.sound:hover #volume {
+  display: flex;
+}
+
+#volume {
+  width: 6rem;
+  height: 0.5rem;
+  margin-left: 0.5rem;
+  display: none;
+}
+
+.play-window {
+  width: 90%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 1rem rgba(255, 255, 255, 0.3);
+  border-radius: 0.5rem;
+  position: absolute;
+  top: 5%;
+  z-index: 5;
+  overflow: hidden;
+}
+
+.play-window video {
+  width: 100%;
+  height: 100%;
+}
+
+.play-window:hover .play-pause-btnz {
+  display: flex;
+}
+
+.play-pause-btnz {
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.7);
+  z-index: 10000;
+}
+
+.play-pause-btnz div {
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 0.5rem 0.8rem 0 1rem;
+  border-radius: 0.5rem;
+}
+
+.full-screen-btn {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  padding: 1rem;
+  position: absolute;
+  bottom: 10%;
+  right: 8%;
+  z-index: 100000;
+  cursor: pointer;
+}
+
+.full-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.sideOne,
+.sideThree {
+  position: absolute;
+  width: 0.7rem;
+  height: 0.7rem;
+  left: 0;
+  border-left: 0.2rem solid rgba(255, 255, 255, 0.9);
+}
+
+.sideTwo,
+.sideFour {
+  width: 0.7rem;
+  height: 0.7rem;
+  position: absolute;
+  right: 0;
+}
+
+.sideOne {
+  top: 0;
+  border-top: 0.2rem solid rgba(255, 255, 255, 0.9);
+}
+
+.sideTwo {
+  top: 0;
+  border-right: 0.2rem solid rgba(255, 255, 255, 0.9);
+  border-bottom: 0.2rem solid rgba(255, 255, 255, 0.9);
+  transform: rotate(-90deg);
+}
+
+.sideThree {
+  bottom: 0.1rem;
+  border-bottom: 0.2rem solid rgba(255, 255, 255, 0.9);
+  transform: rotate(0deg);
+}
+
+.sideFour {
+  bottom: 0.1rem;
+  border-left: 0.2rem solid rgba(255, 255, 255, 0.9);
+  border-top: 0.2rem solid rgba(255, 255, 255, 0.9);
+  transform: rotate(180deg);
+}
+
+.play-window.full-screen .sideOne,
+.play-window.full-screen .sideThree {
+  transform: rotate(180deg);
+}
+
+.play-window.full-screen .sideTwo {
+  transform: rotate(90deg);
+}
+
+.play-window.full-screen .sideFour {
+  transform: rotate(0deg);
+}
+
+.video-info {
+  height: 3rem;
+  margin-left: 2rem;
+  color: rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+}
+
+.video-info:hover {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.videos {
+  width: 30rem;
+  height: 100vh;
+  /* background: rgba(255, 255, 255, 0.3); */
+  position: absolute;
+  right: -1000%;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow-y: scroll;
+  transition: all 0.3s linear;
+}
+
+.videos.active {
+  right: 0;
+}
+
+.videos.active::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 30rem;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.6);
+  filter: blur(1px);
+  z-index: -1;
+}
+
+.videos .burger {
+  position: absolute;
+  top: 0.5%;
+  right: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.videos .burger .line1 {
+  position: absolute;
+  width: 3.5rem;
+  transform: rotate(45deg);
+}
+
+.videos .burger .line2 {
+  position: absolute;
+  width: 3.5rem;
+  transform: rotate(-45deg);
+}
+
+.videos h3 {
+  margin-top: 2rem;
+  color: rgb(48, 45, 45);
+  font-size: 2rem;
+}
+
+.videoItem {
+  width: 90%;
+  margin: 2rem 0;
+  cursor: pointer;
+}
+
+.videoItem video {
+  width: 100%;
+  height: 100%;
+}
+
+.videoItem p {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 2rem;
+  font-family: sans-serif;
+}
+
+/* .add-custom {
+    background: rgb(65, 202, 157);
+    padding: 1rem;
+    margin-top: 2rem;
+    cursor: pointer;
+} */
+
+.hide {
+  display: none;
+}
+
+/* media quries */
+
+@media (max-width: 768px) {
+  html {
+    font-size: 55%;
+  }
+
+  nav.active {
+    height: 100vh;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding-top: 2rem;
+  }
+
+  ul {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+    position: absolute;
+    right: 3rem;
+  }
+
+  nav.active ul {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  nav.active li {
+    margin-top: 5rem;
+  }
+
+  nav.active li a {
+    font-size: 5rem;
+    font-weight: bolder;
+    color: transparent;
+    -webkit-text-stroke: 0.5px rgba(255, 255, 255, 0.7);
+    letter-spacing: 3px;
+    position: relative;
+  }
+
+  nav.active li a::before {
+    content: attr(data-text);
+    -webkit-text-stroke: transparent;
+    position: absolute;
+    top: 0;
+    left: -5%;
+    transition: all 0.3s linear;
+  }
+
+  nav.active li a:hover::before {
+    left: 0;
+    color: #fff;
+  }
+
+  nav.active .logo {
+    width: 22rem;
+    height: 8rem;
+    margin-left: 0;
+    font-size: 3.8rem;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 390px) {
+  html {
+    font-size: 45%;
+  }
+
+  .song-info {
+    font-size: 1.6rem;
+  }
+}

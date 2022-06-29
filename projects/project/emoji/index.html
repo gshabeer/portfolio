@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emoji Maker</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/utils.css" />
+  </head>
+  <body>
+    <h1>The Emoji Maker</h1>
+    <div class="container flex">
+      <!-- Left -->
+      <div class="flex left">
+        <div class="emoji color flex">
+          <h1>Choose Color</h1>
+          <div class="clrPicker grid">
+            <div class="clr yellow"></div>
+            <div class="clr green"></div>
+            <div class="clr red"></div>
+            <div class="clr blue"></div>
+          </div>
+        </div>
+
+        <div class="emoji eyes hide">
+          <h1>Choose Eyes</h1>
+          <div class="eyeImgs grid">
+            <img
+              src="./img/img1.webp"
+              alt="Loading"
+              class="eyes emojiClick"
+              data-src="img/img1.webp"
+            />
+            <img
+              src="./img/img2.webp"
+              alt="Loading"
+              class="eyes emojiClick"
+              data-src="img/img2.webp"
+            />
+            <img
+              src="./img/img4.webp"
+              alt="Loading"
+              class="eyes emojiClick"
+              data-src="img/img4.webp"
+            />
+            <img
+              src="./img/img3.webp"
+              alt="Loading"
+              class="eyes emojiClick"
+              data-src="img/img3.webp"
+            />
+          </div>
+        </div>
+        <div class="emoji mouth hide">
+          <h1>Choose Mouth</h1>
+          <div class="mouthImgs grid">
+            <img
+              src="./img/img9.webp"
+              alt="Loading"
+              class="emojiClick"
+              data-src="img/img9.webp"
+            />
+            <img
+              src="./img/img5.webp"
+              alt="Loading"
+              class="emojiClick"
+              data-src="img/img5.webp"
+            />
+            <img
+              src="./img/img11.webp"
+              alt="Loading"
+              class="emojiClick"
+              data-src="img/img11.webp"
+            />
+            <img
+              src="./img/img13.webp"
+              alt="Loading"
+              class="emojiClick"
+              data-src="img/img13.webp"
+            />
+          </div>
+        </div>
+        
+        <!-- Buttons -->
+        <div class="btns hide">
+          <button class="btn" id="prev_btn"><i></i></button>
+        </div>
+      </div>
+
+      <!-- Right -->
+      <div class="right flex">
+        <div class="compImoji">
+          <div class="compEyes flex"></div>
+          <div class="compMouth flex"></div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

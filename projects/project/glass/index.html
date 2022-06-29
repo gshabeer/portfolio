@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glass Background</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="img">
+        <img src="img.webp" alt="Img Here..." />
+        <br />
+        <h2>Ghulam Shabeer</h2>
+        <p>Website Developer</p>
+      </div>
+      <br />
+      <br />
+      <div class="social">
+        <img src="./facebook.png" alt="FB" />
+        <img src="./twitter.png" alt="Twitter" />
+        <img src="./telegram.png" alt="Telegram" />
+      </div>
+      <div class="btn">
+        <button>Message Me</button>
+      </div>
+    </div>
+
+    <script>
+      let cardDiv = document.querySelector(".container");
+
+      cardDiv.addEventListener("mousemove", (e) => {
+        let X = (window.innerWidth / 2 - e.pageX) / 12;
+        let Y = (window.innerHeight / 2 - e.pageY) / 12;
+        cardDiv.style.transform = "rotateX(" + X + "deg) rotateY(" + Y + "deg)";
+      });
+
+      cardDiv.addEventListener("mouseleave", () => {
+        cardDiv.style.transform = "rotate(0deg)";
+      });
+    </script>
+  </body>
+</html>

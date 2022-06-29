@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+
+    <!-- Custom CSS File -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <span>GS</span><span>To</span><span>Do</span><span><img src="css/to-do.svg" alt="Icon Here"></span>
+        </nav>
+    </header>
+
+    <!-- Alert -->
+    <div class="alert hide"></div>
+    <!-- Confirmation -->
+    <div class="confirm">
+        <p>Are You Sure You Want Delete All Notes?</p>
+        <div> <button class="btnConfirm btn22">Confirm</button>
+            <button class="btnCencel btn22">Cencel</button></div>
+    </div>
+    <!-- Main Container -->
+    <div class="container">
+        <h1>To-Do List</h1>
+        <div class="input-container">
+            <form action="" class="form">
+                <input type="text" class="input-box-add todo-input" placeholder="What To-Do Next...">
+                <input type="submit" class="btn add-btn" value="Add">
+            </form>
+        </div>
+        <br>
+        <br>
+        <div class="buttons">
+            <button class="pending active">Pending</button>
+            <button class="clear">Clear All</button>
+            <button class="completed">Completed</button>
+        </div>
+
+    </div>
+
+ <!-- Font Awesome JS File -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+
+    <!-- Custom Script file -->
+    <script src="js/index.js"></script>
+</body>
+
+</html>

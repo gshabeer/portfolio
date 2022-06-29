@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ's Project</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Frequently Asked Questions</h1>
+
+      <div class="quizs">
+        <div class="quiz">
+          <h3>What is Frequently Asked Questions(FAQ)?</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
+            quasi nemo beatae dicta ut magni!
+          </p>
+
+          <div class="append"></div>
+        </div>
+        <div class="quiz">
+          <h3>what is the basic purpose of using them?</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
+            quasi nemo beatae dicta ut magni!
+          </p>
+          <div class="append"></div>
+        </div>
+        <div class="quiz">
+          <h3>Did they really provide usefull information?</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
+            quasi nemo beatae dicta ut magni!
+          </p>
+          <div class="append"></div>
+        </div>
+        <div class="quiz">
+          <h3>What type of information does they provide?</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
+            quasi nemo beatae dicta ut magni!
+          </p>
+          <div class="append"></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let quizs = document.querySelectorAll(".quiz");
+
+      quizs.forEach((quiz) => {
+        // append plus/minus btn
+        let appendBtn = quiz.querySelector(".append");
+
+        appendBtn.addEventListener("click", () => {
+          // To remove previous opened one
+          quizs.forEach((item) => {
+            let prevAppendBtn = item.querySelector(".append");
+            if (item !== quiz) {
+              item.classList.remove("appended");
+              prevAppendBtn.classList.remove("active");
+            }
+          });
+
+          quiz.classList.toggle("appended");
+          appendBtn.classList.toggle("active");
+        });
+      });
+    </script>
+  </body>
+</html>

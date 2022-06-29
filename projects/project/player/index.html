@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GS Media Player</title>
+
+    <!-- Font Awesome CSS File -->
+    <link rel="stylesheet" href="css/all.min.css" />
+
+    <!-- Custom CSS File -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <a href="index.html">
+          <div class="logo">GS <span>Guide's</span></div>
+        </a>
+        <ul>
+          <li><a href="#" data-text="Home">Home</a></li>
+          <li><a href="#" data-text="About">About</a></li>
+          <li><a href="#" data-text="Contact Us">Contact Us</a></li>
+        </ul>
+
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container">
+      <div class="player">
+        <div class="play-window">
+          <div class="play-pause-btnz">
+            <div class="play-btn">
+              <i class="fa fa-play"></i>
+            </div>
+            <div class="pause-btn hide">
+              <i class="fa fa-pause"></i>
+            </div>
+          </div>
+          <div class="full-screen-btn">
+            <div class="sideOne"></div>
+            <div class="sideTwo"></div>
+            <div class="sideThree"></div>
+            <div class="sideFour"></div>
+          </div>
+        </div>
+        <div class="controls">
+          <!-- range slider -->
+          <div class="range-bar">
+            <!-- Running video time -->
+            <span class="video-duration">
+              <span class="hr">00</span>:<span class="min">00</span>:<span
+                class="sec"
+                >00</span
+              >
+            </span>
+
+            <input type="range" id="range-slider" min="0" max="100" value="0" />
+
+            <!-- total video time -->
+            <span class="total-time">
+              <span class="hr">00</span>:<span class="min">00</span>:<span
+                class="sec"
+                >00</span
+              >
+            </span>
+          </div>
+
+          <div class="ctrl-btns">
+            <p class="song-info">video clip 1</p>
+
+            <div class="state-btns">
+              <!-- backward button -->
+              <div class="prev state-btn">
+                <i class="fa fa-step-backward"></i>
+              </div>
+
+              <!-- Play/Pause Button -->
+              <div class="state">
+                <div class="state-btn play">
+                  <i class="far fa-play-circle"></i>
+                </div>
+                <div class="state-btn pause hide">
+                  <i class="far fa-pause-circle"></i>
+                </div>
+              </div>
+
+              <!-- forward button -->
+              <div class="next state-btn">
+                <i class="fa fa-step-forward"></i>
+              </div>
+            </div>
+
+            <div class="sound">
+              <span class="state-btn v-up hide"
+                ><i class="fa fa-volume-up"></i
+              ></span>
+              <span class="state-btn v-down"
+                ><i class="fa fa-volume-down"></i
+              ></span>
+              <span class="state-btn v-mute hide"
+                ><i class="fa fa-volume-mute"></i
+              ></span>
+              <input
+                type="range"
+                id="volume"
+                step="0.5"
+                min="0"
+                max="100"
+                value="20"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-info">
+        <i class="fa fa-info-circle fa-2x"></i>
+      </div>
+
+      <div class="videos">
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+        </div>
+
+        <h3>Your PlayList</h3>
+        <!-- <input type="file" id="custom" multiple hidden>
+            <label class="add-custom" for="custom">+ Add Custom</label> -->
+      </div>
+    </div>
+
+    <!-- Font Awesome CDN JS File -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+
+    <!-- Custom JS File -->
+    <script src="js/index.js"></script>
+  </body>
+</html>

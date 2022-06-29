@@ -1,0 +1,424 @@
+html {
+  font-size: 62.5%;
+}
+
+::-webkit-scrollbar {
+  width: 1.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  box-shadow: inset 0 0 1rem rgba(0, 0, 0, 0.5);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  border: none;
+  outline: none;
+}
+
+body {
+  background: linear-gradient(169deg, rgb(218, 123, 36), rgb(180, 253, 250))
+    fixed no-repeat;
+  width: 100vw;
+  height: 100vh;
+  font-size: 1.6rem;
+}
+
+nav {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+}
+
+nav span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2.1rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-family: cursive;
+  position: relative;
+  left: 2rem;
+  border-radius: 0.5rem;
+  z-index: 100;
+}
+
+nav span::before {
+  content: "";
+  position: absolute;
+  width: 6rem;
+  height: 3rem;
+  transform: skew(45deg);
+  z-index: -10;
+}
+
+nav span:nth-child(1) {
+  color: coral;
+}
+
+nav span:nth-child(1)::before {
+  background: cornflowerblue;
+}
+
+nav span:nth-child(2) {
+  color: #173f4b;
+}
+
+nav span:nth-child(2)::before {
+  background: #07a188;
+}
+
+nav span:nth-child(3) {
+  color: yellow;
+}
+
+nav span:nth-child(3)::before {
+  background: crimson;
+}
+
+nav span:nth-child(4)::before {
+  background: #dd7ffa;
+}
+
+nav span > img {
+  height: 2.5rem;
+  margin-left: 1rem;
+}
+
+.alert {
+  padding: 0.3rem 1.5rem;
+  color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  box-shadow: 0.2rem 0.2rem 1rem rgba(0, 0, 0, 0.7);
+  border-radius: 0.5rem;
+  position: absolute;
+  top: 3rem;
+  right: 2rem;
+  text-align: center;
+  line-height: 3rem;
+  transition: all 0.3s linear;
+  z-index: 10000;
+  animation: popUp 2s ease-in-out;
+}
+
+@keyframes popUp {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.alert-danger {
+  background: #f82a2a;
+}
+
+.alert-success {
+  background: #287c3c;
+}
+
+.confirm {
+  width: 28rem;
+  height: 12rem;
+  background: #fff;
+  box-shadow: 0.1rem 0.2rem 0.7rem rgba(0, 0, 0, 0.5);
+  border-radius: 0.3rem;
+  position: absolute;
+  top: 35%;
+  left: 35%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  transform: scale(0);
+  transition: all 0.3s linear;
+  z-index: 10000;
+}
+
+.confirm.active {
+  transform: scale(1);
+}
+
+.confirm p {
+  font-size: 1.4rem;
+}
+
+.confirm button {
+  padding: 0.5rem 1rem;
+  color: rgb(34, 27, 27);
+  margin: 1rem;
+  cursor: pointer;
+}
+
+.btnConfirm {
+  background: rgb(236, 106, 156);
+}
+
+.btnCencel {
+  background: rgb(191, 210, 218);
+}
+
+.container {
+  width: 60%;
+  height: 80%;
+  color: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  margin: 3rem auto;
+  padding-top: 1rem;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 0.5rem;
+  box-shadow: 0.2rem 0.2rem 2rem 0.5rem rgba(0, 0, 0, 0.5);
+  position: relative;
+  transition: all 0.5s linear;
+  z-index: 10;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.input-box-add,
+.input-box {
+  width: 40rem;
+  height: 4rem;
+  margin-right: 1rem;
+  padding: 0.5rem 1rem;
+  overflow-x: visible;
+}
+
+.to_do-inputs {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 1rem 0;
+}
+
+.buttons {
+  width: 88%;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2rem auto;
+  margin-bottom: 4rem;
+}
+
+.buttons button,
+.btn {
+  width: 9rem;
+  height: 4rem;
+  background: #173f4b;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+}
+
+.buttons button:hover,
+.btn:hover,
+.buttons button.active {
+  background: #fff;
+  color: #173f4b;
+}
+
+.buttons button.active:hover {
+  background: #173f4b !important;
+  color: #fff !important;
+}
+
+.buttons button::after {
+  width: 0;
+}
+
+.buttons button.active::after {
+  width: 100%;
+}
+
+.buttons button.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.9rem;
+  height: 0.6rem;
+  background: #83d106;
+  transition: all 0.5s linear;
+}
+
+.delete {
+  width: 4rem;
+  height: 4rem;
+  cursor: pointer;
+}
+
+.delete,
+.clear {
+  background: #e71717 !important;
+  color: #fff !important;
+}
+
+.delete:hover,
+.clear:hover {
+  background: #fff !important;
+  color: #e71717 !important;
+}
+
+.fall {
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+  transition: 0.4s all linear;
+}
+
+.delete:hover .fa-trash-alt {
+  color: #e71717;
+}
+
+.delete .fa-trash-alt {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.edit {
+  width: 4rem;
+  height: 4rem;
+  margin-left: 1rem;
+  font-size: 1.7rem;
+  background: #465042;
+  color: #fff;
+  cursor: pointer;
+}
+
+.edit:hover {
+  background: #fff;
+  color: #465042;
+}
+
+.checkbox-lable {
+  width: 4rem;
+  height: 4rem;
+  background: #2fe948;
+  color: #fff;
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0.8rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.checkbox-lable:hover {
+  background: #fff;
+  color: #2fe948;
+}
+
+.checked-box {
+  text-decoration: line-through;
+  opacity: 0.5;
+  background: #e5ec82;
+  transition: all 0.3s linear;
+}
+
+.checked-box {
+  transition: all 0.3s linear;
+}
+
+.check-sign {
+  position: absolute;
+  display: none;
+}
+
+.hide {
+  display: none !important;
+  transform: scale(0) !important;
+  transition: all 0.3s linear;
+}
+
+/* media quireis */
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+
+  .input-box-add,
+  .input-box {
+    width: 30rem;
+  }
+}
+
+@media (max-width: 560px) {
+  html {
+    font-size: 48%;
+  }
+
+  .input-box-add,
+  .input-box {
+    width: 25rem;
+    height: 3rem;
+  }
+
+  .buttons button,
+  .btn {
+    width: 8rem;
+    height: 3rem;
+    font-size: 1.5rem;
+  }
+
+  .delete,
+  .checkbox-lable,
+  .edit {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 45%;
+  }
+
+  .input-box-add,
+  .input-box {
+    width: 22rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .input-box-add,
+  .input-box {
+    width: 18rem;
+  }
+}
+
+@media (max-width: 340px) {
+  .input-box-add,
+  .input-box {
+    width: 13rem;
+  }
+}
