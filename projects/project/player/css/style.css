@@ -530,4 +530,14 @@ li a:hover {
   .song-info {
     font-size: 1.6rem;
   }
+  
+  .player {
+    width: 97%;
+    margin-top: 8rem; 
+  }
+  
+  .video-info {
+    position: absolute;
+    right: 2rem; 
+  }
 }
