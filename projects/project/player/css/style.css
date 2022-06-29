@@ -520,6 +520,15 @@ li a:hover {
   html {
     font-size: 50%;
   }
+    .player {
+    width: 97%;
+    margin-top: 8rem; 
+  }
+  
+  .video-info {
+    position: absolute;
+    right: 2rem; 
+  }
 }
 
 @media (max-width: 390px) {
@@ -531,13 +540,5 @@ li a:hover {
     font-size: 1.6rem;
   }
   
-  .player {
-    width: 97%;
-    margin-top: 8rem; 
-  }
-  
-  .video-info {
-    position: absolute;
-    right: 2rem; 
-  }
+
 }
