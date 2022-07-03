@@ -611,12 +611,15 @@ footer p {
   .content {
     text-align: justify;
     margin: auto;
-    width: 90%;
   }
 
   .reverse .content {
-    text-align: center;
+    text-align: justify;
     margin: auto;
+  }
+
+.content {
+    width: 90%;
   }
 
   .center-service {
