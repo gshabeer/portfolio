@@ -21,6 +21,7 @@
     </div>
 
     <script>
+   document.onload = () => {
       let bomb = document.querySelector(".bomb");
       let boom = document.querySelector(".boom");
       let boomEffect = document.querySelector(".boomEffect");
@@ -33,6 +34,23 @@
           boomEffect.paused;
         }, 3000);
       });
+ }
+
+
+window.onload = () => {
+      let bomb = document.querySelector(".bomb");
+      let boom = document.querySelector(".boom");
+      let boomEffect = document.querySelector(".boomEffect");
+      bomb.addEventListener("click", () => {
+        boom.classList.remove("hide");
+        boomEffect.play();
+
+        setTimeout(() => {
+          boom.classList.add("hide");
+          boomEffect.paused;
+        }, 3000);
+      });
+ }
     </script>
   </body>
 </html>
