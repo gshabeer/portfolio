@@ -608,9 +608,10 @@ footer p {
     height: 90vh;
   }
 
-  .content {
+  .content,.content2 {
     text-align: justify;
     margin: auto;
+    width: 90%;
   }
 
   .reverse .content {
@@ -632,10 +633,6 @@ footer p {
 
   .sec3 .contents:nth-child(even) {
     flex-direction: column-reverse;
-  }
-
-  .content {
-    width: 90%;
   }
 
   .img img {
