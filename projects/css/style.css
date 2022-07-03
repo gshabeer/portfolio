@@ -77,4 +77,8 @@
   .sec3 .contents {
     flex-direction: column-reverse !important;
   }
+
+  .imgprev img {
+    width: 98vw;
+  }
 }
