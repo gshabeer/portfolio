@@ -39,10 +39,10 @@
 .imgprev {
   width: 100vw;
   height: 100vh;
-  margin-bottom: 4rem;
+  margin-top: 5rem;
   background: rgba(255, 255, 255, 0.8);
   display: flex;
-  justify-content: center;
+  /*justify-content: center;*/
   align-items: center;
   flex-direction: column;
   position: fixed;
@@ -58,7 +58,8 @@
 }
 
 .btn {
-  margin-top: 1.8rem;
+  font-size: 2rem;
+  margin-top: 2rem;
 }
 
 .hide {
