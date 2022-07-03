@@ -39,10 +39,9 @@
 .imgprev {
   width: 100vw;
   height: 100vh;
-  margin-top: 15rem;
   background: rgba(255, 255, 255, 0.8);
   display: flex;
-  /*justify-content: center;*/
+ /*justify-content: center;*/
   align-items: center;
   flex-direction: column;
   position: fixed;
@@ -53,13 +52,17 @@
 
 .imgprev img {
   width: 80vw;
+  margin-top: 15rem;
   border: 0.8rem solid rgba(0, 0, 0, 0.5);
   object-fit: contain;
 }
 
 .btn {
-  font-size: 4rem;
   margin-top: 2rem;
+}
+
+.btn button {
+   font-size: 4rem;
 }
 
 .hide {
