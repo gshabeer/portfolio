@@ -57,10 +57,12 @@
   object-fit: contain;
 }
 
+.imgprev button {
+  font-size: 2rem;
+}
+
 .btn {
-  width: 2rem;
-  height: 2rem;
-  margin-top: 4rem;
+  margin-top: 8rem;
 }
 
 .hide {
