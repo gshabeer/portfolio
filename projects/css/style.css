@@ -68,8 +68,8 @@
   margin-left: 6rem !important;
 }
 
-reverse .content {
-    text-align: justify;
+.reverse .content {
+    text-align: center;
 }
 
 
