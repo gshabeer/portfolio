@@ -70,6 +70,8 @@
 
 .reverse .content2 {
     text-align: justify;
+     position: relative;
+     left: -3rem;
 }
 
 
