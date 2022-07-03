@@ -58,11 +58,9 @@
 }
 
 .btn {
-  margin-top: 2rem;
-}
-
-.btn button {
-   font-size: 4rem;
+  width: 2rem;
+  height: 2rem;
+  margin-top: 4rem;
 }
 
 .hide {
@@ -75,8 +73,8 @@
 
 .reverse .content2 {
     text-align: justify;
-     position: relative;
-     left: -3rem;
+    position: relative;
+    left: -3rem;
 }
 
 
