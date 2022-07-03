@@ -68,6 +68,11 @@
   margin-left: 6rem !important;
 }
 
+reverse .content {
+    text-align: justify;
+}
+
+
 @media (max-width: 768px) {
   .sec3 .contents {
     flex-direction: column-reverse !important;
