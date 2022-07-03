@@ -614,11 +614,9 @@ footer p {
     width:90%;
   }
 
-  .reverse .content2 {
+  .reverse .content {
     text-align: justify;
     margin: auto;
-    position: relative;
-    left: -4rem;
   }
 
   .center-service {
