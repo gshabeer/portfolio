@@ -193,6 +193,7 @@ body {
   .scientific button sup {
     font-size: 1.1rem;
     margin:left: 0;
+    bottom: 0.4rem;
 
   }
 }
