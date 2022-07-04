@@ -167,7 +167,7 @@ body {
 
 .scientific button sup {
   font-size: 1.2rem;
-  margin-left: 0.1rem;
+  margin:left: 0.2rem;
   position: relative;
   bottom: 0.2rem;
 }
@@ -188,5 +188,11 @@ body {
   }
   .calculator {
     transform: scale(0.7);
+  }
+
+  .scientific button sup {
+    font-size: 1.1rem;
+    margin:left: 0;
+
   }
 }
