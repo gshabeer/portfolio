@@ -57,7 +57,7 @@
   object-fit: contain;
 }
 
-.imgprev button {
+.imgprev .btn {
   margin-top: 10rem;
 }
 
