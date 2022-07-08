@@ -1,5 +1,14 @@
 let projects = [
-  {
+    {
+    sub_heading: "Online Education Website",
+    text: "This is a online education website where you can saw multiple courses to learn. This is created with HTML and Tailwind. You can swith between pages without page reload. But it is just CSS trick not exactly multiple pages. ",
+    img: "img/edu.webp",
+    ancher: "https://gsedu.netlify.app",
+    parent_class: "reverse",
+    content_class: "content2",
+    img_class: "img3",
+    circle_class: "curcle2",
+  },  {
     sub_heading: "GS Keeps Website",
     text: "This is note keeping website. Every note you save will remain until you yourself will delete them.",
     img: "img/gs-keeps.webp",
