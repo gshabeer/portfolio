@@ -17,7 +17,7 @@ body {
   font-size: 1.6rem;
   background-image: var(--bg);
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: cover;
   display: grid;
   place-items: center;
   /*position: fixed;*/
