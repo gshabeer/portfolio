@@ -1,4 +1,14 @@
 let projects = [
+  {
+    sub_heading: "Shooting Game",
+    text: "This is a shooting game. Kill as many enemy as you can. Switch to hard mod try to play if you can. Each location has it's own enemy type.",
+    img: "imgshoot.webp",
+    ancher: "project/shoot/index.html",
+    parent_class: "contents",
+    content_class: "content",
+    img_class: "img",
+    circle_class: "curcle",
+  },
     {
     sub_heading: "Online Education Website",
     text: "This is a online education website where you can saw multiple courses to learn. This is created with HTML and Tailwind. You can swith between pages without page reload. But it is just CSS trick not exactly multiple pages. ",
