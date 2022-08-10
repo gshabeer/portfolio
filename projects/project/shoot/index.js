@@ -567,7 +567,7 @@ window.addEventListener("load", () => {
 
         backgroundSrc = localData[0].background;
         document.body.style.setProperty("--bg", `url(${backgroundSrc})`);
-      console.log(document.body.style.getProperty("--bg"));
+        console.log(document.body);
 }
     });
 
