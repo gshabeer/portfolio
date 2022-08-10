@@ -1,0 +1,500 @@
+html {
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-size: 1.6rem;
+  background-image: var(--bg);
+  background-repeat: no-repeat;
+  background-size: auto
+  display: grid;
+  place-items: center;
+  position: fixed;
+  overflow: hidden;
+}
+
+#cursor {
+  height: 7rem;
+  position: absolute;
+  top: -5rem;
+  left: -5rem;
+  transform: translate(-47%, -45%);
+  pointer-events: none;
+  z-index: 1000000;
+}
+
+#collisionCanvas {
+  opacity: 0;
+  cursor: none;
+}
+
+#canvas1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: none;
+}
+
+.onScreenBtnz {
+  position: absolute;
+  bottom: 3.5rem;
+  color: #fff;
+  left: 30%;
+}
+
+.onScreenBtnz > button,
+.game_over button {
+  font-size: 4.5rem;
+  color: #fff;
+  background: transparent;
+  border: none;
+  margin-right: 2rem;
+}
+
+.onScreenBtnz > button:hover {
+  opacity: 0.7;
+}
+
+.confirm {
+  width: 50rem;
+  height: 15rem;
+  background: rgba(30, 30, 30, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  font-size: 2rem;
+  padding: 2rem;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-20%, 80%) scale(0);
+  box-shadow: 0.3rem 0.3rem 1rem 0.8rem rgba(0, 0, 0, 0.6);
+  border-radius: 0.5rem;
+  transition: all 0.5s linear;
+}
+
+.confirm div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.confirm button {
+  width: 20rem;
+}
+
+.confirm.active {
+  transform: translate(-50%, -200%) scale(1);
+}
+
+.menu,
+.location,
+.settings,
+.difficulty,
+.volume,
+.instructions,
+.game_over {
+  width: 50rem;
+  height: 45rem;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 2rem;
+  background: rgba(30, 30, 30, 0.95);
+  border-radius: 0.5rem;
+  color: rgba(255, 255, 255, 0.8);
+  transform: translateX(0);
+  opacity: 1;
+  box-shadow: 0.3rem 0.3rem 1rem 0.8rem rgba(0, 0, 0, 0.6);
+  transition: all 0.5s linear;
+  z-index: 1000;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.menu.animate {
+  transform: translate(-210%, -50%);
+  opacity: 0;
+}
+
+.menu h1 {
+  letter-spacing: 0.2rem;
+  font-size: 2.4rem;
+  font-family: cursive;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.highScores,
+.difficultyText {
+  position: absolute;
+  top: 0.8rem;
+  right: 0.8rem;
+}
+
+.difficultyText {
+  left: 0.8rem;
+}
+
+.location {
+  width: 70rem;
+  height: 45rem;
+  padding-bottom: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+}
+
+.location.animate {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.location .loc_menu {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.location ul {
+  width: 40%;
+  height: 90%;
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.location .previewImg {
+  width: 50%;
+  height: 100%;
+  border: 2px solid;
+}
+
+.location .previewImg img {
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  overflow: hidden;
+}
+
+.location .btn.back {
+  left: 4rem;
+  top: 2rem;
+}
+
+.settings {
+  text-align: center;
+  transform: translate(120%, -50%);
+  opacity: 0;
+  z-index: 999;
+}
+
+.settings.animate {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  z-index: 10000;
+}
+
+.difficulty {
+  width: 30rem;
+  height: 25rem;
+  text-align: center;
+  padding-top: 6rem;
+  transform: translate(-50%, 160%);
+  opacity: 0;
+}
+
+.difficulty button {
+  margin-bottom: 0;
+}
+
+.difficulty.animate {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
+.volume {
+  height: 20rem;
+  padding-top: 6rem;
+  transform: translate(-50%, -280%);
+  opacity: 0;
+}
+
+.volume h1 {
+  text-align: center;
+  margin-top: -6rem;
+}
+
+.volume.animate {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+
+.volume h2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 4rem;
+}
+
+.volume h2 input {
+  appearance: none;
+  width: 30rem;
+  height: 1.5rem;
+  background: #edf1f4;
+  border-radius: 1.5rem;
+  box-shadow: 0 0 0 0.18rem rgba(0, 0, 0, 0.4) inset;
+  overflow: hidden;
+}
+
+.volume h2 input::-webkit-slider-thumb {
+  appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: #fff;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 0, 0, 0.4);
+  box-shadow: -41rem 0 0 40rem #c96aff;
+}
+
+.volume h2 input::-moz-range-thumb {
+  appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: #fff;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 0, 0, 0.4);
+  box-shadow: -41rem 0 0 40rem #c96aff;
+}
+
+.reset_high_score .confirm.active {
+  color: #fff;
+  transform: translate(-50%, 80%);
+}
+
+.instructions {
+  align-items: center;
+  justify-content: flex-start;
+  text-align: justify;
+
+  transform: translate(-200%, -200%);
+}
+
+.instructions.animate {
+  transform: translate(-50%, -50%);
+}
+
+.instructions p {
+  height: 30rem;
+  line-height: 3;
+  margin-top: 6rem;
+  font-family: system-ui;
+}
+
+.instructions .btn.back {
+  left: 3rem;
+}
+
+.instructions #hard_mode,
+.instructions #inst_loc {
+  background: transparent;
+  border: none;
+  font-size: 1.6rem;
+  color: rgba(255, 255, 255, 0.4);
+  text-decoration: underline;
+}
+
+.game_over {
+  height: 20rem;
+  transform: translate(-50%, -80%);
+}
+
+.game_over div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.btn {
+  width: 25rem;
+  padding: 0.5rem;
+  letter-spacing: 0.1rem;
+  margin: auto;
+  border-radius: 5rem;
+  font-size: 2rem;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: -0.2rem 0.3rem 0rem 0.4rem gray;
+  transition: all 0.3s linear;
+  outline: none;
+  border: none;
+}
+
+.btn:hover {
+  background: #fff;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.btn.active {
+  background: rgba(30, 30, 30, 0.5);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.btn.back {
+  width: 6rem;
+  height: 3rem;
+  font-size: 2.7rem;
+  position: absolute;
+  top: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.hide {
+  display: none !important;
+}
+
+button,
+li {
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 400px) {
+  .menu,
+  .location,
+  .settings,
+  .difficulty,
+  .volume,
+  .instructions,
+  .game_over {
+    width: 35rem;
+  }
+
+  .confirm {
+    width: 35rem;
+    font-size: 1.4rem;
+  }
+
+  .confirm.active {
+    transform: translate(-47%, -200%) scale(1);
+  }
+
+  .confirm .btn {
+    width: 10rem;
+  }
+
+  .location {
+    height: 55rem;
+  }
+
+  .location .loc_menu {
+    flex-direction: column;
+    margin: auto;
+    margin-top: 12%;
+  }
+
+  .location .loc_menu ul,
+  .location .previewImg {
+    width: 100%;
+  }
+
+  .location .previewImg {
+    margin-top: 20%;
+  }
+
+  .location .btn.back {
+    left: 1rem;
+  }
+
+  .volume {
+    padding-top: 10rem;
+  }
+
+  .instructions p {
+    line-height: 2.5;
+    margin-top: 3rem;
+  }
+
+  .instructions .btn.back {
+    left: 1rem;
+  }
+}
+
+@media (max-width: 280px) {
+  .menu,
+  .location,
+  .settings,
+  .difficulty,
+  .volume,
+  .instructions,
+  .game_over {
+    width: 25rem;
+  }
+
+  .btn {
+    width: 15rem;
+    font-size: 1.8rem;
+  }
+
+  .highScores,
+  .difficultyText {
+    font-size: 1.5rem;
+  }
+
+  .location.animate,
+  .settings.animate,
+  .instructions.animate {
+    padding-top: 8rem;
+  }
+
+  .instructions.animate {
+    height: 54rem;
+    padding-top: 6rem;
+  }
+
+  .instructions p:nth-child(even) {
+    line-height: 2;
+    margin-top: 1rem;
+  }
+
+  .instructions p:nth-child(odd) {
+    margin-top: 8rem;
+  }
+}

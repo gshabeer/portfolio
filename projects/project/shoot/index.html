@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shooting Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <img id="cursor" src="./img/cursor.png" alt="Loading" />
+
+    <canvas id="collisionCanvas"></canvas>
+
+    <canvas id="canvas1"> </canvas>
+
+    <!-- Game Main Menu -->
+    <div class="menu_wrapper">
+      <!-- nav buttons while playing -->
+      <div class="onScreenBtnz hide">
+        <button id="pause_game">
+          <i class="far fa-pause-circle"></i>
+        </button>
+
+        <button class="hide" id="play_game">
+          <i class="far fa-play-circle"></i>
+        </button>
+
+        <button id="go_home">
+          <i class="fa fa-home"></i>
+        </button>
+
+        <div class="confirm">
+          <p>Are you sure you want to go back to main manu?</p>
+          <div>
+            <button class="btn" id="confirm_yes">Yes</button>
+            <button class="btn" id="confirm_no">No</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- menu -->
+      <div class="menu">
+        <h3 class="difficultyText">
+          Difficulty : <span id="difficulty_text">Easy</span>
+        </h3>
+        <h3 class="highScores">High Score : <span id="high_score">0</span></h3>
+        <h1>Welcome To The Game</h1>
+        <button class="btn" id="start">Start Game</button>
+        <button class="btn" id="settings">Settings</button>
+        <button class="btn" id="instructions">Instructions</button>
+      </div>
+
+      <!-- settings -->
+      <div class="settings">
+        <h1>Settings</h1>
+        <button class="btn" id="location">Change Location</button>
+        <button class="btn" id="difficulty">Difficulty Level</button>
+        <button class="btn" id="volume">Change Volumes</button>
+        <button class="btn" id="reset_score">Reset High Scores</button>
+        <button class="btn back" id="settings_done" title="Go Back">
+          <i class="fa fa-long-arrow-alt-left"></i>
+        </button>
+      </div>
+
+      <!-- Location -->
+      <div class="location">
+        <h1>Locations</h1>
+        <div class="loc_menu">
+          <ul>
+            <li class="btn" data-imgsrc="background/forest.jpg">Forest</li>
+            <li class="btn" data-imgsrc="background/city.webp">City</li>
+            <li class="btn" data-imgsrc="background/sky.webp">Sky</li>
+            <li class="btn" data-imgsrc="background/landscape.webp">
+              Landscape
+            </li>
+          </ul>
+
+          <div class="previewImg">
+            <img src="./background/forest.jpg" loading="lazy" alt="Loading" />
+          </div>
+        </div>
+
+        <button class="btn back" id="location_done">
+          <i class="fa fa-long-arrow-alt-left"></i>
+        </button>
+      </div>
+
+      <!-- difficulty -->
+      <div class="difficulty">
+        <h2>Choose Difficulty</h2>
+        <button class="btn">Easy</button>
+        <button class="btn">Hard</button>
+
+        <button class="btn back">
+          <i class="fa fa-long-arrow-alt-left"></i>
+        </button>
+      </div>
+
+      <!-- control volume -->
+      <div class="volume">
+        <h1>Adjust Volume</h1>
+
+        <h2>
+          SFX:
+          <label for="sfx_volume"></label>
+          <input
+            type="range"
+            min="0"
+            max="1"
+            step="0.2"
+            value="0.8"
+            id="sfx_volume"
+          />
+        </h2>
+
+        <button class="btn back" id="volume_done">
+          <i class="fa fa-long-arrow-alt-left"></i>
+        </button>
+      </div>
+
+      <!-- reset high score -->
+      <div class="reset_high_score">
+        <div class="confirm">
+          <p>Are you sure you want to reset high score?</p>
+          <div>
+            <button class="btn" id="reset_yes">Yes</button>
+            <button class="btn" id="reset_no">No</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- instruction -->
+      <div class="instructions">
+        <h1>Instructions</h1>
+        <p>
+          Welcome to the game. This is a shooting game. Kill as many ravens you
+          can and make a high score record. If you are really a pro player then
+          try
+          <button id="hard_mode">hard mode</button>. A raven with smooke like
+          tail gives 3 extra score. Choose between
+          <button id="inst_loc">locations</button>. Every location has its own
+          enemy type. Visit settings from main menu for other things.
+        </p>
+
+        <p>
+          Created by
+          <a href="https://gsguides.netlify.app" target="_blank">GS Guides</a>
+        </p>
+
+        <button class="btn back" id="instructions_back">
+          <i class="fa fa-long-arrow-alt-left"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="game_over hide">
+      <h1>Game Over your score: <span>0</span></h1>
+      <div>
+        <button id="gameOver_home"><i class="fa fa-home"></i></button>
+        <button id="retry_game"><i class="fa fa-redo"></i></button>
+      </div>
+      <h3 class="highScores">High Score : <span>0</span></h3>
+    </div>
+
+    <!-- Font Awesome js file -->
+    <!-- <script src="./all.min.js"></script> -->
+
+    <!-- Font Awesome CDN JS File -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+
+    <!-- Custom js file -->
+    <script src="./index.js"></script>
+  </body>
+</html>
