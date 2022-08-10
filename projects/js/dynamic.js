@@ -2,7 +2,7 @@ let projects = [
   {
     sub_heading: "Shooting Game",
     text: "This is a shooting game. Kill as many enemy as you can. Switch to hard mod try to play if you can. Each location has it's own enemy type.",
-    img: "imgshoot.webp",
+    img: "img/shoot.webp",
     ancher: "project/shoot/index.html",
     parent_class: "contents",
     content_class: "content",
