@@ -20,7 +20,7 @@ body {
   background-size: auto;
   display: grid;
   place-items: center;
-  position: fixed;
+  /*position: fixed;*/
   overflow: hidden;
 }
 
