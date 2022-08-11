@@ -15,6 +15,7 @@ const difficultyBtnz = document.querySelectorAll(".difficulty .btn");
 const menuBtnz = document.querySelectorAll("button");
 const previewImg = document.querySelector(".previewImg img");
 
+const background_image = document.getElementById("background_image");
 const cursor = document.getElementById("cursor");
 const musicVol = document.getElementById("music_volume");
 const sfxVol = document.getElementById("sfx_volume");
@@ -35,7 +36,7 @@ let sfxVolume = 0.8;
 let startGame = false;
 let difficulty_level = "easy";
 
-let backgroundSrc = "background/forest.jpg";
+let backgroundSrc = "background/sky.webp";
 
 function difficultyCheck(dl) {
   difficulty_level = dl;
@@ -114,7 +115,7 @@ menuBtnz.forEach((btn) => {
 
       // location done button
     } else if (btn.id === "location_done") {
-      document.body.style.setProperty("--bg", `url(${backgroundSrc})`);
+      background_image.src = backgroundSrc;
       toggleClass(settings, "add");
       toggleClass(locationSec, "remove");
 
@@ -184,6 +185,14 @@ menuBtnz.forEach((btn) => {
       }
 
       // change difficulty level
+    } else if (btn.id === "mobile") {
+      btn.classList.toggle("rotated");
+
+      if (btn.classList.contains("rotated")) {
+        document.body.style.transform = "rotate(-90deg)";
+      } else {
+        document.body.style.transform = "rotate(0deg)";
+      }
     } else if (btn.id === "difficulty") {
       toggleClass(difficultySec, "add");
       toggleClass(settings, "remove");
@@ -519,7 +528,7 @@ window.addEventListener("load", () => {
       }
 
       backgroundSrc = localData[0].background;
-      document.body.style.setProperty("--bg", `url(${backgroundSrc})`);
+      background_image.src = backgroundSrc;
     }
   });
 
@@ -566,9 +575,8 @@ window.addEventListener("load", () => {
         }
 
         backgroundSrc = localData[0].background;
-        document.body.style.setProperty("--bg", `url(${backgroundSrc})`);
-        console.log(document.body);
-}
+        background_image.src = backgroundSrc;
+      }
     });
 
     let localData = JSON.parse(localStorage.getItem("game_data"));
@@ -610,7 +618,8 @@ window.addEventListener("mousemove", (e) => {
   cursor.style.left = e.pageX + "px";
 
   let elm = e.target;
-  if (e.sourceCapabilities.firesTouchEvents !== true) {
+
+  if (!e.sourceCapabilities.firesTouchEvents) {
     if (elm.id !== "canvas1") {
       cursor.classList.add("hide");
     } else if (elm.id === "canvas1") {
